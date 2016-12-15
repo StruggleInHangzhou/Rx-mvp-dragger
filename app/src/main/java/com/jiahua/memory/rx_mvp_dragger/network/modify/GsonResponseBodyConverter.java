@@ -1,11 +1,9 @@
 package com.jiahua.memory.rx_mvp_dragger.network.modify;
 
 import com.google.gson.Gson;
-import com.jiahuaandroid.core.constant.ResponseCodeEnum;
-import com.jiahuaandroid.core.network.ErrResponse;
-import com.jiahuaandroid.core.network.ResultResponse;
-import com.jiahuaandroid.core.network.ex.ApiException;
-import com.jiahuaandroid.core.network.ex.ResultException;
+import com.jiahua.memory.rx_mvp_dragger.network.ErrResponse;
+import com.jiahua.memory.rx_mvp_dragger.network.ResultResponse;
+import com.jiahua.memory.rx_mvp_dragger.network.ex.ResultException;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
@@ -37,17 +35,7 @@ public class GsonResponseBodyConverter<T> implements Converter<ResponseBody, T>
         {
             //ResultResponse 只解析code字段进行约定异常处理
             ResultResponse resultResponse = gson.fromJson(response, ResultResponse.class);
-            if (resultResponse.getCode() == ResponseCodeEnum.SUCCESS.getValue())
-            {
-                return gson.fromJson(response, type);
-            } else if (resultResponse.getCode() == ResponseCodeEnum.AUTH_FAILURE.getValue())
-            {
-                throw new ApiException(ResponseCodeEnum.AUTH_FAILURE);
-            } else if (resultResponse.getCode() == ResponseCodeEnum.AUTH_CONFLICT.getValue())
-            {
-
-                throw new ApiException(ResponseCodeEnum.AUTH_CONFLICT);
-            } else if (resultResponse.getCode() == -1)
+            if (resultResponse.getCode() == -1)
             {
                 //解析非标准约定数据
                 return gson.fromJson(response, type);
