@@ -1,3 +1,7 @@
+## 目标：
+* 构架整个APP的底层架构
+* 打包成arr发布出去，项目中直接引用，也防止其他不必要的修改，导致项目发生问题
+
 **使用的技术：**
 ```
     compile 'com.xy.hjh:basetools:1.1.0'
@@ -26,5 +30,3 @@
 
     compile 'org.greenrobot:greendao:3.2.0'
    ```
-
-
