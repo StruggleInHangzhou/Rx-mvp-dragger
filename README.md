@@ -1,6 +1,6 @@
 **使用的技术：**
 ```
- compile 'com.xy.hjh:basetools:1.1.0'
+    compile 'com.xy.hjh:basetools:1.1.0'
     compile 'com.google.code.gson:gson:2.4'
     compile 'me.yokeyword:fragmentation:0.8.5'
     compile 'me.yokeyword:fragmentation-swipeback:0.7.9'
