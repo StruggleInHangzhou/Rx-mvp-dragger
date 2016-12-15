@@ -4,6 +4,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.jiahua.db.generated.DaoMaster;
+import com.jiahua.db.generated.UserDao;
 
 
 /**
@@ -19,8 +20,9 @@ public class THDevOpenHelper extends DaoMaster.OpenHelper{
         super(context, name, factory);
     }
 
+    @SuppressWarnings("unchecked")
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        MigrationHelper.migrate(db, UserDao.class);
     }
 }
