@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Rx-mvp-dragger</string>
+    <string name="save">保存</string>
+    <string name="load">加载</string>
+</resources>
