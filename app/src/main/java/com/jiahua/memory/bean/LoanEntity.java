@@ -5,10 +5,10 @@ import lombok.Data;
 /**
  * Created by jhhuang on 2017/3/13
  * QQ:781913268
- * Description：xxx
+ * Description：自定义的实体类
  */
 @Data
-public class LoanEntiy
+public class LoanEntity
 {
     private String userName;
     private int age;

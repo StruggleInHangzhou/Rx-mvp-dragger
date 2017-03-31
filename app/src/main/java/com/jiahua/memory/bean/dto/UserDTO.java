@@ -9,7 +9,7 @@ import lombok.EqualsAndHashCode;
 /**
  * Created by jhhuang on 2017/3/9
  * QQ:781913268
- * Description：xxx
+ * Description： 服务端返回实体对象
  */
 @Data
 @EqualsAndHashCode(callSuper = true)

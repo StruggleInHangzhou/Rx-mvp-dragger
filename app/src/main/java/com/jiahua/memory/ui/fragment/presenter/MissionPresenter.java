@@ -3,6 +3,7 @@ package com.jiahua.memory.ui.fragment.presenter;
 
 import com.jiahua.core.mvp.FragmentPresenter;
 import com.jiahua.db.entity.User;
+import com.jiahua.memory.bean.dto.UserDTO;
 import com.jiahua.memory.bean.query.UserQuery;
 import com.jiahua.memory.ui.fragment.contract.MissionContract;
 import com.jiahua.memory.ui.fragment.moudle.MissionMoudle;
@@ -49,10 +50,10 @@ public class MissionPresenter extends FragmentPresenter<MissionContract.IView, M
                 .compose(callbackOnIOThread())
                 .map(CommonResponse::getData)
                 .compose(verifyOnMainThread())
-                .subscribe(new NetSubseriber<String>()
+                .subscribe(new NetSubseriber<UserDTO>()
                 {
                     @Override
-                    public void onNext(String s)
+                    public void onNext(UserDTO dto)
                     {
 
                     }

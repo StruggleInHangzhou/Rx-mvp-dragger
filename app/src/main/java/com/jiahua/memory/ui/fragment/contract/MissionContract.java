@@ -4,6 +4,7 @@ package com.jiahua.memory.ui.fragment.contract;
 import com.jiahua.core.mvp.FragmentView;
 import com.jiahua.core.mvp.Moudle;
 import com.jiahua.db.entity.User;
+import com.jiahua.memory.bean.dto.UserDTO;
 import com.jiahua.memory.bean.query.UserQuery;
 import com.jiahua.network.CommonResponse;
 
@@ -20,7 +21,7 @@ public interface MissionContract
     {
         Observable<CommonResponse<User>> login(UserQuery query);
 
-        Observable<CommonResponse<String>> getVerificationCode(UserQuery query);
+        Observable<CommonResponse<UserDTO>> getVerificationCode(UserQuery query);
 
         Observable<CommonResponse<String>> captcha(String mobile);
     }

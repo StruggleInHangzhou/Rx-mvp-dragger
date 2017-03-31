@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 
 import com.jiahua.core.BaseFragment;
 import com.jiahua.memory.adapter.LoanAdapter;
-import com.jiahua.memory.bean.LoanEntiy;
+import com.jiahua.memory.bean.LoanEntity;
 import com.jiahua.memory.rx_mvp_dragger.R;
 import com.jiahua.memory.rx_mvp_dragger.databinding.FragmentPickUpBinding;
 import com.jiahua.memory.ui.fragment.contract.PickUpContract;
@@ -26,7 +26,7 @@ public class PickUpFragment extends BaseFragment<PickUpPresenter> implements Pic
 {
     private FragmentPickUpBinding mBinding;
     private LoanAdapter mLoanAdapter;
-    private List<LoanEntiy> mDatas;
+    private List<LoanEntity> mDatas;
 
     public static PickUpFragment create()
     {
@@ -77,7 +77,7 @@ public class PickUpFragment extends BaseFragment<PickUpPresenter> implements Pic
     }
 
     @Override
-    public void notifyDataChange(List<LoanEntiy> list)
+    public void notifyDataChange(List<LoanEntity> list)
     {
         mDatas.clear();
         mDatas.addAll(list);

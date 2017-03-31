@@ -3,7 +3,7 @@ package com.jiahua.memory.ui.fragment.contract;
 
 import com.jiahua.core.mvp.FragmentView;
 import com.jiahua.core.mvp.Moudle;
-import com.jiahua.memory.bean.LoanEntiy;
+import com.jiahua.memory.bean.LoanEntity;
 
 import java.util.List;
 
@@ -20,7 +20,7 @@ public interface PickUpContract
 
     interface IView extends FragmentView
     {
-        void notifyDataChange(List<LoanEntiy> list);
+        void notifyDataChange(List<LoanEntity> list);
     }
 
     interface IPresenter

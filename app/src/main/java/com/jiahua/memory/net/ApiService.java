@@ -2,6 +2,7 @@ package com.jiahua.memory.net;
 
 
 import com.jiahua.db.entity.User;
+import com.jiahua.memory.bean.dto.UserDTO;
 import com.jiahua.memory.bean.query.UserQuery;
 import com.jiahua.network.CommonResponse;
 
@@ -35,7 +36,7 @@ public interface ApiService
      */
     @FormUrlEncoded
     @POST("user/getVerificationCode.do")
-    Observable<CommonResponse<String>> getVerificationCode(@FieldMap Map<String, String> params);
+    Observable<CommonResponse<UserDTO>> getVerificationCode(@FieldMap Map<String, String> params);
 
     /**
      * @param mobile 单个键值对解析

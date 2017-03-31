@@ -2,6 +2,7 @@ package com.jiahua.memory.ui.fragment.moudle;
 
 
 import com.jiahua.db.entity.User;
+import com.jiahua.memory.bean.dto.UserDTO;
 import com.jiahua.memory.bean.query.UserQuery;
 import com.jiahua.memory.net.ApiService;
 import com.jiahua.memory.ui.fragment.contract.MissionContract;
@@ -32,7 +33,7 @@ public class MissionMoudle implements MissionContract.IMoudle
     }
 
     @Override
-    public Observable<CommonResponse<String>> getVerificationCode(UserQuery query)
+    public Observable<CommonResponse<UserDTO>> getVerificationCode(UserQuery query)
     {
         return ClientManager.getClient().create(ApiService.class).getVerificationCode(ParamUtils.createMapForObject(query));
     }
