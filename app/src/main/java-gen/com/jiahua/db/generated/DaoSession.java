@@ -8,7 +8,7 @@ import org.greenrobot.greendao.database.Database;
 import org.greenrobot.greendao.identityscope.IdentityScopeType;
 import org.greenrobot.greendao.internal.DaoConfig;
 
-import com.jiahua.db.bean.User;
+import com.jiahua.db.entity.User;
 
 import com.jiahua.db.generated.UserDao;
 

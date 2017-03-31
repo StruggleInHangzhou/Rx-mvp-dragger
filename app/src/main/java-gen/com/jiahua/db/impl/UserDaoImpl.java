@@ -1,6 +1,7 @@
 package com.jiahua.db.impl;
 
-import com.jiahua.db.bean.User;
+
+import com.jiahua.db.entity.User;
 import com.jiahua.db.generated.DaoSession;
 import com.jiahua.db.generated.UserDao;
 
@@ -11,10 +12,10 @@ import javax.inject.Inject;
 import rx.Observable;
 
 /**
- * Created by jhhuang on 2016/12/14.
- * QQ:781913268
- * Description：UserDaoImpl
+ * Created by jiahua on 17-2-24.
+ * Description：
  */
+
 public class UserDaoImpl
 {
     private UserDao mDao;
@@ -25,6 +26,10 @@ public class UserDaoImpl
         mDao = session.getUserDao();
     }
 
+    public Observable<List<User>> loadAll_rx()
+    {
+        return mDao.rx().loadAll();
+    }
 
     public void saveUserLists(final List<User> list)
     {
@@ -32,7 +37,8 @@ public class UserDaoImpl
         {
             return;
         }
-        mDao.getSession().runInTx(() -> {
+        mDao.getSession().runInTx(() ->
+        {
             for (User user : list)
             {
                 mDao.insertOrReplace(user);
@@ -40,8 +46,14 @@ public class UserDaoImpl
         });
     }
 
-    public Observable<List<User>> loadAll_rx()
+    public Observable<User> insertOrReplace(final User user)
+    {
+        return mDao.rx().insertOrReplace(user);
+    }
+
+    public Observable<List<User>> loadAll()
     {
         return mDao.rx().loadAll();
     }
+
 }

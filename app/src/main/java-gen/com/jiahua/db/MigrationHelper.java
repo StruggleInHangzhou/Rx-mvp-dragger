@@ -1,11 +1,14 @@
 package com.jiahua.db;
 
+
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
 import android.util.Log;
+
+import com.jiahua.memory.rx_mvp_dragger.BuildConfig;
 
 import org.greenrobot.greendao.AbstractDao;
 import org.greenrobot.greendao.database.Database;
@@ -18,16 +21,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-
 /**
  * Created by jhhuang on 2016/11/10.
- * QQ:781913268
  * Description：数据库升级使用，在DaoMaster中修改版本触发升级数据库操作
  */
 public final class MigrationHelper
 {
 
-    public static boolean DEBUG = false;
+    public static boolean DEBUG = BuildConfig.DEBUG;
     private static String TAG = "MigrationHelper";
 
     public static void migrate(SQLiteDatabase db, Class<? extends AbstractDao<?, ?>>... daoClasses)

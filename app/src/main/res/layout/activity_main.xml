@@ -1,43 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
 
     <data/>
 
-    <RelativeLayout
+    <FrameLayout
         android:id="@+id/rl_root"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:context="com.loan.hzszn.MainActivity">
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/rv_user"
+        <FrameLayout
+            android:id="@+id/fl_tab_container"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/space_50"/>
 
-        <LinearLayout
-            android:id="@+id/ll_buttom"
+        <com.jiahua.memory.view.BottomBar
+            android:id="@+id/bottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_50"
+            android:layout_gravity="bottom"/>
+
+        <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:orientation="horizontal">
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/space_50"
+            android:background="@drawable/actionbar_shadow_up"/>
 
-            <Button
-                android:id="@+id/btn_save"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/save"/>
 
-            <Button
-                android:id="@+id/btn_load"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/load"/>
-
-        </LinearLayout>
-
-    </RelativeLayout>
-
+    </FrameLayout>
 </layout>
-

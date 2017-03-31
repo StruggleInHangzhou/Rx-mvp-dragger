@@ -14,7 +14,6 @@ import com.jiahua.db.generated.UserDao;
  * 封装DaoMaster.OpenHelper方法, 在更新的时候,用来保存原来的数据
  * greenDao默认在更新的时候,会新建表,原来的数据就丢失了
  */
-
 public class THDevOpenHelper extends DaoMaster.OpenHelper{
     public THDevOpenHelper(Context context, String name, SQLiteDatabase.CursorFactory factory) {
         super(context, name, factory);

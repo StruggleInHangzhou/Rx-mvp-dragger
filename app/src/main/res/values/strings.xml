@@ -2,4 +2,22 @@
     <string name="app_name">Rx-mvp-dragger</string>
     <string name="save">保存</string>
     <string name="load">加载</string>
+    <string name="error_not_know">未知错误</string>
+    <string name="error_http">网络错误</string>
+    <string name="error_socket_time_out">连接超时</string>
+    <string name="error_not_connect">未能连接到服务器</string>
+
+    <string name="title">标题</string>
+    <string name="down_state">正在下载：%s</string>
+
+    <string name="main_tab_1">消息</string>
+    <string name="main_tab_2">甩单</string>
+    <string name="main_tab_3">接单</string>
+    <string name="main_tab_4">我的</string>
+    <string name="mine_info">个人信息</string>
+    <string name="mine_certification">实名认证</string>
+    <string name="mine_settings">设置</string>
+    <string name="mine_feedback">意见反馈</string>
+    <string name="confirm">确定</string>
+    <string name="again_exit">再按一次退出</string>
 </resources>
