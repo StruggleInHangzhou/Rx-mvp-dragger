@@ -21,13 +21,26 @@ import rx.Observable;
 
 public interface ApiService
 {
+    /**
+     * @param query 对象
+     * @return
+     */
     @POST("auth/app/login")
     Observable<CommonResponse<User>> login(@Body UserQuery query);
 
+    /**
+     *
+     * @param params 多个键值对解析
+     * @return
+     */
     @FormUrlEncoded
     @POST("user/getVerificationCode.do")
     Observable<CommonResponse<String>> getVerificationCode(@FieldMap Map<String, String> params);
 
+    /**
+     * @param mobile 单个键值对解析
+     * @return
+     */
     @FormUrlEncoded
     @POST("auth/resetPwd/captcha")
     Observable<CommonResponse<String>> captcha(@Field("mobile") String mobile);

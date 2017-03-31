@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Rx-mvp-dragger</string>
+    <string name="app_name">LookIt</string>
     <string name="save">保存</string>
     <string name="load">加载</string>
     <string name="error_not_know">未知错误</string>
